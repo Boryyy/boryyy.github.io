@@ -1,88 +1,59 @@
-html {
-    scroll-behavior: smooth;
-  }
 body {
-    display: block;
-    overflow-x: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 12px;
+}
+p {
+  margin: 0;
+}
+p > p {
+  display: inline;
+}
+p.command:before {
+  content: 'root@server:~$ ';
+}
+table {
+  width: 420px;
+}
+.typed-cursor {
+  display: inline-block;
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
   }
-  nav.logo{
-      width:50px;
+  50% {
+    opacity: 0;
   }
-
-  .navbar-brand img {
-    max-height: 50px;
-    max-width: 50px;
+  100% {
+    opacity: 1;
   }
-  .navbar-brand {
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: 900;
-    color: #6c63ff;
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
   }
-  nav ul li a {
-    color: #a9a9a9;
-    font-size: 22px;
-    margin: auto 10px;
+  50% {
+    opacity: 0;
   }
-  nav ul li a:hover {
-    color: #6c63ff;
+  100% {
+    opacity: 1;
   }
-
-  section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
   }
-  section.alt{
-    background-color: #f0f8ff;
+  50% {
+    opacity: 0;
   }
-  section h1 {
-    text-transform: uppercase;
-    font-weight: 900;
-    color: #6c63ff;
-    text-align: left;
-    margin-bottom: 20px;
+  100% {
+    opacity: 1;
   }
-  section p {
-    font-size: 16px;
-    font-weight: 300;
-  }
-  button {
-    max-width: 50%;
-    border-radius: 50px !important;
-  }
-  #hero .col {
-    justify-content: center; 
-    flex-direction: column;
-    display: flex;
-  }
-  #hero .img-col {
-    justify-content: flex-end; 
-    margin-top: 100px;
-  }
-  #hero img {
-    max-width: 130% !important;
-    width: 130%;
-  }
-  #hero .card {
-    box-shadow: 11px 7px 16px #f9f9f9;
-    border: 0;
-    text-align: center;
-  }
-  #hero .icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px;
-  }
-  #projects .projects {
-    margin-bottom: 50px;
-  }
-  #contact {
-    text-align: center;
-    background-color: #6c63ff;
-    color: white;
-  }
-  #contact h1 {
-    text-align: center;
-    color: white;
-  }
+}
